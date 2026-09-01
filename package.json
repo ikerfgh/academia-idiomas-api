@@ -1,0 +1,19 @@
+{
+  "name": "academia-servicios",
+  "version": "1.0.0",
+  "description": "Servicio REST (crear alumnos) y GraphQL (consultar alumnos) para la Academia de Idiomas",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "graphql": "^15.10.3",
+    "graphql-http": "^1.23.0"
+  }
+}
