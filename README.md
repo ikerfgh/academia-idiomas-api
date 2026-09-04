@@ -31,7 +31,7 @@ Body (JSON):
 Ejemplo:
 
 ```bash
-curl -X POST https://TU-URL-DE-RENDER.onrender.com/api/alumnos \
+curl -X POST https://academia-idiomas-api.onrender.com/api/alumnos \
   -H "Content-Type: application/json" \
   -d '{
     "nombre": "Ana Torres",
@@ -103,7 +103,7 @@ Todos los filtros son opcionales y se pueden combinar. También existe:
 Ejemplo con `curl`:
 
 ```bash
-curl -X POST https://TU-URL-DE-RENDER.onrender.com/graphql \
+curl -X POST https://academia-idiomas-api.onrender.com/graphql \
   -H "Content-Type: application/json" \
   -d '{"query":"{ alumnos(idiomaAEstudiar: \"Ingles\") { id nombre nivel } }"}'
 ```
