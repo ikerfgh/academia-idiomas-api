@@ -112,3 +112,31 @@ curl -X POST https://academia-idiomas-api.onrender.com/graphql \
 
 SQLite (`academia.db`), se crea automáticamente al iniciar el servidor. Es la misma
 base de datos que consultan tanto el servicio REST como el servicio GraphQL.
+
+## Pruebas
+
+Las pruebas usan el ejecutor de pruebas que ya trae Node.js y una base de datos
+temporal, así que no tocan `academia.db`.
+
+```
+npm install
+npm test
+```
+
+- `tests/rest.test.js`: servicio REST (crear alumno: 201, 400, 404 y 409, descuento
+  familiar, consulta por id y tiempo de respuesta).
+- `tests/graphql.test.js`: servicio GraphQL (filtros por idioma, nivel, activo y
+  nombre, filtros combinados, lista vacía, consulta por id y tiempo de respuesta).
+
+Cada vez que se sube código a GitHub, el flujo `.github/workflows/tests.yml` corre
+las pruebas automáticamente (pestaña **Actions**).
+
+## Cómo trabajamos en equipo
+
+Equipo: Escandón Perea Iker, Lerios Imai André Alejandro, Olivo Castro Héctor Tadeo
+y Rivera Arriaga Carlos Germán.
+
+- La rama `main` es la versión estable.
+- Cada cambio se hace en su propia rama y se integra con un pull request que revisa
+  otro integrante.
+- Las entregas se marcan con una etiqueta de versión (por ejemplo `v1.0`).
