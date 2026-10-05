@@ -1,7 +1,8 @@
 const Database = require("better-sqlite3");
 const path = require("path");
 
-const dbPath = path.join(__dirname, "academia.db");
+// En las pruebas se usa una base de datos temporal (variable DB_PATH)
+const dbPath = process.env.DB_PATH || path.join(__dirname, "academia.db");
 const db = new Database(dbPath);
 
 db.exec(`
