@@ -4,7 +4,8 @@
   "description": "Servicio REST (crear alumnos) y GraphQL (consultar alumnos) para la Academia de Idiomas",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "node --test"
   },
   "keywords": [],
   "author": "",

@@ -158,6 +158,13 @@ const root = {
 app.all("/graphql", createHandler({ schema, rootValue: root }));
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Servidor escuchando en el puerto ${PORT}`);
-});
+
+// Solo se levanta el servidor si el archivo se ejecuta directamente
+// (así las pruebas pueden importar la app sin abrir el puerto 3000)
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Servidor escuchando en el puerto ${PORT}`);
+  });
+}
+
+module.exports = app;
